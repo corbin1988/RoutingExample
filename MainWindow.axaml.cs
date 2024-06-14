@@ -1,11 +1,20 @@
-using Avalonia.Controls;
+using System;
+using Avalonia.Markup.Xaml;
+using Avalonia.ReactiveUI;
 
-namespace RoutingExample;
-
-public partial class MainWindow : Window
+namespace RoutingExample
 {
-    public MainWindow()
+    public class MainWindow : ReactiveWindow<MainWindowViewModel>
     {
-        InitializeComponent();
+        public MainWindow()
+        {
+            this.WhenActivated(disposables => { });
+            AvaloniaXamlLoader.Load(this);
+        }
+
+        private void WhenActivated(Action<object> value)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
