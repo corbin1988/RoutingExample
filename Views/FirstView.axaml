@@ -1,0 +1,11 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:RoutingExample.ViewModels"
+             x:Class="RoutingExample.Views.FirstView"
+             x:DataType="vm:FirstViewModel">
+    <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+        <TextBlock Text="Hi, I'm the first view!" />
+        <TextBlock Text="{Binding UrlPathSegment}" />
+    </StackPanel>
+</UserControl>
